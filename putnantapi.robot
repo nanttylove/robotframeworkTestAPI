@@ -11,7 +11,7 @@ ${URL_PUT}    http://localhost:5000
 *** Keywords ***
 PUT API NANT TEST
     Create Session    NANTAPI    ${URL_PUT}
-    &{data}=  Create Dictionary    name=nantRobot    text=Nant edit Hello word
+    &{data}=  Create Dictionary    name=nantRobot    text=Nant edit Hello world
     &{headers}=  Create Dictionary    Content-Type=from-data
     ${resp}=  PUT Request    NANTAPI    /todos/1    data=${data}    headers=${headers}
     Log   ${resp.text}
